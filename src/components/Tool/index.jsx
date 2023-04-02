@@ -2,8 +2,9 @@ import React from 'react';
 import rockImage from '../../assets/rock.png';
 import paperImage from '../../assets/paper.png';
 import scissorsImage from '../../assets/scissors.png';
+import './styles.scss';
 
-const RPSImage = ({ item }) => {
+const RPSImage = ({ item, text, onClick, spin }) => {
   let imageSrc;
 
   switch (item) {
@@ -20,12 +21,21 @@ const RPSImage = ({ item }) => {
       return null;
   }
 
-  return <div><img src={imageSrc} alt={item} style={{
+  const onItemClick = () => {
+    onClick && onClick()
+  }
+
+  return <div onClick={onItemClick} className={ spin ? 'spin': ''}>
+    <img src={imageSrc} alt={item} style={{
     width: '100px',
     height: '100px',
     borderRadius: '50%',
     cursor: 'pointer',
-  }}/></div>;
+  }}/>
+  {
+    text && <p>{text}</p>
+  }
+  </div>;
 };
 
 export default RPSImage;
