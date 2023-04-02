@@ -4,6 +4,10 @@ import paperImage from "../../assets/paper.png";
 import scissorsImage from "../../assets/scissors.png";
 import "./styles.scss";
 
+// This component is used to display the rock, paper, scissors images
+// It also has a spin class that can be applied to the image to make it spin
+// It also has a text prop that can be used to display text below the image
+// It also has an onClick prop that can be used to handle click events
 const RPSImage = ({ item, text, onClick, spin }) => {
   let imageSrc;
 
