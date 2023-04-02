@@ -1,0 +1,21 @@
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  width: 100vw;
+  color: #ffffff;
+  padding: 80px;
+
+  .subtitle {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 24px;
+
+    > span {
+      font-weight: bold;
+      font-size: 14px;
+    }
+  }
+}

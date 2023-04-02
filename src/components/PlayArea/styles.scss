@@ -1,0 +1,13 @@
+.play-area-container {
+  margin: 32px auto;
+
+  .how-to-play {
+    margin: 0 auto;
+    max-width: 600px;
+    text-align: center;
+    margin-top: 34px;
+    font-weight: bold;
+    font-size: 24px;
+    backdrop-filter: blur(20px);
+  }
+}
